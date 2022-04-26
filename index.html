@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 80%;
+        margin: 0 auto;
+      }
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      a:active {
+        color: red;
+      }
+
+      .nav {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+      }
+      header {
+        border-bottom: 1px solid #f4f4f4;
+      }
+      .nav__logo {
+        font-size: medium;
+        font-weight: 700;
+      }
+      .button {
+        display: inline-block;
+        background-color: blue;
+        color: #fff;
+        padding: 0.75rem 2.5rem;
+        font-weight: var(--font-semi);
+        border-radius: 0.5rem;
+        transition: 0.3s;
+      }
+      .nav__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 145px;
+      }
+      /* .nav__item {
+        margin-bottom: 2rem;
+      } */
+
+      .nav__link,
+      .nav__logo {
+        color: #444;
+      }
+      .nav__link:hover,
+      .nav__link:active,
+      .nav__link .active:active {
+        font-weight: 500;
+        border-bottom: 2px solid blue;
+      }
+      main {
+        height: 70vh;
+      }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+      }
+      .footer {
+        border-top: 1px solid hsl(0deg 0% 100% / 20%);
+        background-color: #27282c;
+        color: hsl(0deg 0% 100% / 60%);
+        text-align: center;
+        font-weight: 500;
+        padding: 2rem 0;
+        margin-top: 60px;
+      }
+      .nav__toggle {
+        display: none;
+      }
+      .nav__toggle > span {
+        display: flex;
+        margin: 5px;
+        height: 4px;
+        background-color: #27282c;
+        width: 32px;
+        /* outline: 1px solid red; */
+      }
+      /* Media queries */
+      @media screen and (max-width: 768px) {
+        .nav__menu {
+          display: none;
+        }
+        .nav__toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body id="home">
+    <header>
+      <nav class="nav">
+        <div>
+          <a href="#" target="_self" class="nav__logo">Home Page</a>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html#home" class="nav__link active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html#about" class="nav__link">About</a>
+            </li>
+          </ul>
+
+          <div class="nav__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />I'am <span class="home__title-color">_________</span><br />
+            Lorem, ipsum.
+          </h1>
+
+          <a href="./about.html" class="button">About page &rarr;</a>
+        </div>
+      </section>
+      <table>
+        <caption>
+          A summary of the UK's most famous punk bands
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Band</th>
+            <th scope="col">Year formed</th>
+            <th scope="col">No. of Albums</th>
+            <th scope="col">Most famous song</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Buzzcocks</th>
+            <td>1976</td>
+            <td>9</td>
+            <td>Ever fallen in love (with someone you shouldn't've)</td>
+          </tr>
+          <tr>
+            <th scope="row">The Clash</th>
+            <td>1976</td>
+            <td>6</td>
+            <td>London Calling</td>
+          </tr>
+
+          <tr>
+            <th scope="row">The Stranglers</th>
+            <td>1974</td>
+            <td>17</td>
+            <td>No More Heroes</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Total albums</th>
+            <td colspan="2">77</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p class="footer__title">Web programming 1</p>
+    </footer>
+  </body>
+</html>
